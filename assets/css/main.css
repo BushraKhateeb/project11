@@ -1,16 +1,35 @@
 @import './base.css';
-
 body {
     font-family: var(--mainFont);
+}
+p{
+    font-size: 19px;
+}
+h1{
+    font-size: 42px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 24px;
+}
+a{
+font-size: 20px
+}
+span{
+    font-size: 20px;
 }
 .header {
     padding: 10px;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #fff;
-    width: 100%;
 }
 .logo {
     display: flex;
@@ -85,23 +104,24 @@ body {
 }
 .interface .text p:first-of-type{
     width: 25px;
-    font-size: 12px;
     color: var(--mainColor);
     font-family: var(--subFont);
  }
  .interface-content h1{
-    font-size: 35px;
     width: 65%;
     color: black;
     font-weight: 700;
  }
  .interface .text p:last-of-type{
     color:#898989;
-    font-size: 12px;
  }
- .interface span{
+ .interface p span{
+    font-size: 19px;
+ }
+ .interface span {
     font-weight: 700;
     color: var(--mainColor);
+    font-size: 42px;
  }
  .interface .action{
     display: flex;
@@ -123,13 +143,17 @@ body {
     flex-wrap: wrap;
     padding: 5px;
  }
-
-.interface-photo{
-    width: 50%;
-    text-align: center;
+.interface-photo , .interface-content{
+    width: calc((100% - 30px) / 2);
 }
+ .interface-photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
 .interface-photo img {
-    width: 300px;
+    width:70%;
 }
 /*end interface*/
 /*start features*/
@@ -151,18 +175,15 @@ body {
 }
  .general-idea p:first-of-type {
     color:var(--mainColor);
-    font-size: 12px;
     font-family: var(--subFont);
  }
  .general-idea h3{
-    font-size: 25px;
     color: black;
     font-weight: 800;
     font-family: var(--subFont);
  }
  .general-idea p:last-of-type {
     color: #898989;
-    font-size: 12px;
  }
  .features-count{
     display: flex;
@@ -182,20 +203,18 @@ body {
     color: #FFFFFF;
     border-radius: 8px;
  }
- .feature p{
-    font-size: 12px;
+ .feature p {
     padding-top: 7px;
  }
  .feature svg{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background-color: #FFFFFF;
     border-radius: 50%;
     padding: 5px;
     text-align: center;
  }
  .feature h4{
-    font-size: 14px;
     font-family: var(--subFont);
  }
 
@@ -210,12 +229,17 @@ body {
    width: 100%;
 }
 .statistics-photo{
-    width: 50%;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+
 }
-.statistics-photo img{
-    padding : 0px 50px;
-    width: 350px;
+.statistics-photo
+,.statistics-text{
+    width: calc((100% - 30px)/2);
+}
+.statistics-photo img {
+    width: 65%;
 }
 .statistics-text{
     color: #FFFFFF;
@@ -230,7 +254,6 @@ body {
     font-family: var(--subFont);
 }
  .statistics-text h2{
-    font-size: 25px;
     font-weight: 700;
     width: 40%;
  }
@@ -243,7 +266,6 @@ body {
  }
  .num number{
     color: #F0C932;
-    font-size: 18px;
     font-weight: 500;
  }
  .num{
@@ -256,6 +278,7 @@ body {
 }
 .courses .row {
     gap: 40px;
+    align-items: flex-start;
 }
 .showen-courses {
     display: flex;
@@ -285,20 +308,18 @@ body {
     background-color: var(--mainColor);
     color: #FFFFFF;
     font-weight: 500;
-    font-size: 13px;
     padding: 7px;
     position: absolute;
     top: 20px;
-    z-index: 9;
+    z-index: 1;
 }
 .best-course .price {
     position: absolute;
     color: #FFFFFF;
-    font-size: 14px;
     font-weight: 500;
     right: 15px;
     bottom: 15px;
-    z-index: 9;
+    z-index: 1;
 }
 .course-name {
     display: flex;
@@ -313,28 +334,19 @@ body {
     gap: 15px;
 }
 .best-course p {
-    font-size: 12px;
     color: #898989;
 }
 .best-course h3 {
-    font-size: 16px;
     font-weight: 600;
 }
 .best-course span {
-    font-size: 10px;
     color: var(--mainColor);
 }
 .hidden-courses {
-    width: 30%;
-    padding-top: 0;
-}
-.hidden-courses .column{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 0;
-    height: 130vh;
+    width: 30%;
 }
 .hidden-courses p:first-of-type {
     color: var(--mainColor);
@@ -342,7 +354,6 @@ body {
     font-family: var(--subFont);
 }
 .hidden-courses h2 {
-    font-size: 24px;
     font-weight: 800;
     margin-bottom: 30px;
     width: 20%;
@@ -360,6 +371,7 @@ body {
     color: white;
     border: white solid 1px;
     border-radius: 8px;
+    width: fit-content;
     padding: 10px 35px;
     font-family: var(--subFont);
 }
@@ -434,10 +446,6 @@ footer {
 footer a,
 footer p {
     color: #FFFFFF;
-    font-size: 10px;
-}
-footer h2 {
-    font-size: smaller;
 }
 footer a {
     padding-bottom: 10px;
@@ -447,9 +455,7 @@ footer i {
     border: #FFFFFF solid 1px;
     padding: 5px;
 }
-footer h2 {
-    padding-bottom: 13px;
-}
+
 .footer-start {
     width: 25%;
     display: flex;
@@ -470,23 +476,28 @@ footer h2 {
 }
 /*end footer*/
 /*RWD */
-@media screen and (max-width:1900px) {
-    .hidden-courses{
-        height: 120vh;
+@media screen and (max-width:1500px) {
+    .footer-end 
+    ,.footer-start{
+        width: 100%;
+        padding-bottom: 50px;
     }
-}
-
-@media screen and (max-width:1700px) {
-    .hidden-courses{
-        height: 105vh;
+    .text-about-us p {
+        display: none;
     }
-}
-@media screen and (max-width:1400px) {
-    .hidden-courses{
-        height: 85vh;
+    .social-media,
+    footer .logo {
+        margin: auto;
     }
 }
 @media screen and (max-width:1200px) {
+    .header .nav {
+        display: none;
+    }
+    .menu {
+        display: block;
+        order: 2;
+    }
     .showen-courses {
         width: 100%;
     }
@@ -508,7 +519,9 @@ footer h2 {
     .hidden-courses .column{
         height: fit-content;
     }
-
+    .footer-end h2{
+        font-size: 30px;
+    }
 }
 @media screen  and (max-width:1090px)  {
     .general-idea{
@@ -530,19 +543,8 @@ footer h2 {
         width: 100%;
         margin: auto;
     }
-
-    .hidden-courses{
-        padding-top: 50px;
-    }
 }
 @media screen and (max-width:992px) {
-    .header .nav {
-        display: none;
-    }
-    .menu {
-        display: block;
-        order: 2;
-    }
 
     .Testimonial {
         width: 100%;
@@ -571,9 +573,6 @@ footer h2 {
     .interface-photo{
         width: 100%;
     }
-    .interface-photo img{
-        width: 350px;
-    }
     .features{
         padding: 40px 20px;
     }
@@ -592,28 +591,16 @@ footer h2 {
     padding: 40px 20px;
     }
 }
+@media screen and (max-width:900px){
+    .footer-item {
+        width: 50%;
+        margin: auto;
+    }
+}
 @media screen and (max-width:768px) {
-    .footer-start {
-        width: 100%;
-        padding-bottom: 50px;
-    }
-
-    .footer-end {
-        width: 100%;
-    }
-
-    .text-about-us p {
-        display: none;
-    }
     .best-course{
         padding-top: 50px;
     }
-
-    .social-media,
-    footer .logo {
-        margin: auto;
-    }
-
     .courses {
         padding: 0;
     }
@@ -624,9 +611,10 @@ footer h2 {
     .interface{
         padding: 30px 50px;
     }
+    footer .footer-item {
+        width: 50%;
+    }
   
- 
-
 }
 @media screen and (max-width:700px) {
 
@@ -658,16 +646,11 @@ footer h2 {
         width: 25px;
     }
 
-    .header .logo a {
-        font-size: 14px;
-    }
-
     .footer-item {
         width: 50%;
         padding-bottom: 25px;
     }
     .interface-content h1{
-        font-size: 30px;
         width: 70%;
      }
      .interface-photo img {
