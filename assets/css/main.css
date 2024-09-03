@@ -18,13 +18,13 @@ h4{
     font-size: 24px;
 }
 a{
-font-size: 20px
+font-size: 19px
 }
 span{
-    font-size: 20px;
+    font-size: 17px;
 }
 .header {
-    padding: 10px;
+    padding: 20px 10px;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -87,7 +87,7 @@ span{
 /*start main*/
 /*start interface*/
 .interface{
-    padding: 50px 80px;
+    padding: 25px 40px;
 }
 .interface-content{
     width: 50%;
@@ -158,7 +158,7 @@ span{
 /*end interface*/
 /*start features*/
  .features {
-    padding: 50px 80px;
+    padding: 80px 40px;
 }
 .features .row{
     gap: 20px;
@@ -274,7 +274,7 @@ span{
 /*end staticis*/
 /*start courses*/
 .courses {
-    padding: 40px 50px;
+    padding: 25px 40px;
 }
 .courses .row {
     gap: 40px;
@@ -382,7 +382,7 @@ span{
 }
 .Testimonials {
     background-color: #FFFFFF;
-    padding: 40px 20px;
+    padding: 25px 40px;
 }
 .Testimonials h2 {
     text-align: center;
@@ -401,8 +401,8 @@ span{
     position: relative;
 }
 .Testimonials .client-img img {
-    width: 35px;
-    height: 35px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 .Testimonial .client {
@@ -440,7 +440,7 @@ span{
 footer {
     background-color: #393E46;
     color: #FFFFFF;
-    padding: 30px 20px;
+    padding: 25px 40px;
     width: 100%;
 }
 footer a,
@@ -477,6 +477,19 @@ footer i {
 /*end footer*/
 /*RWD */
 @media screen and (max-width:1500px) {
+    .container{
+        width: calc(100% - 80px);
+    }
+    .general-idea{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .features-count{
+        width: 100%;
+    }
+    .courses h3{
+        font-size: 20px;
+    }
     .footer-end 
     ,.footer-start{
         width: 100%;
@@ -498,6 +511,9 @@ footer i {
         display: block;
         order: 2;
     }
+    .feature{
+        padding: 20px 10px;
+     }
     .showen-courses {
         width: 100%;
     }
@@ -513,14 +529,15 @@ footer i {
     .courses {
         padding: 80px;
     }
-    .feature{
-        padding: 20px 10px;
-     }
-    .hidden-courses .column{
-        height: fit-content;
-    }
     .footer-end h2{
         font-size: 30px;
+    }
+    .hidden-courses{
+        text-align: center;
+    }
+    .hidden-courses a 
+    ,.hidden-courses h2{
+        margin: auto;
     }
 }
 @media screen  and (max-width:1090px)  {
@@ -534,7 +551,17 @@ footer i {
         width: 100%;
     }
     .feature{
-        width: 30%;
+        box-sizing: border-box;
+        width: calc((100% - 50px)/3);
+    }
+    .interface-content h1 {
+        width: 80%;
+    }
+    .interface-photo img {
+        width: 85%;
+    }
+    .general-idea{
+        text-align: center;
     }
     .feature:last-of-type{
         display: none;
@@ -543,9 +570,17 @@ footer i {
         width: 100%;
         margin: auto;
     }
+    .statistics-text h2 {
+        width: 80%;
+    }
 }
 @media screen and (max-width:992px) {
-
+    .container{
+        width: calc((100% - 60px));
+    }
+    .interface-photo img {
+        width:55%;
+    }
     .Testimonial {
         width: 100%;
     }
@@ -573,6 +608,14 @@ footer i {
     .interface-photo{
         width: 100%;
     }
+    .interface .text{
+        text-align: center;
+    }
+    .interface .action a
+    ,.interface .action div
+    ,.interface .text p{
+        margin: auto;
+    }
     .features{
         padding: 40px 20px;
     }
@@ -590,11 +633,21 @@ footer i {
     .statistics{
     padding: 40px 20px;
     }
+    .Testimonials .client-img img {
+        width: 60px;
+        height: 60px;
+    }
+    .interface .text h1{
+        margin: auto;
+    }
 }
 @media screen and (max-width:900px){
     .footer-item {
         width: 50%;
-        margin: auto;
+        padding-bottom: 30px;
+    }
+    .footer-end{
+        text-align: center;
     }
 }
 @media screen and (max-width:768px) {
@@ -611,39 +664,90 @@ footer i {
     .interface{
         padding: 30px 50px;
     }
-    footer .footer-item {
-        width: 50%;
+    .feature{
+        width: 48%;
     }
-  
+    .feature:nth-last-child(2){
+        display: none;
+    }
+    .interface 
+    ,.statistics
+    ,.Testimonial
+    ,.courses
+    ,.features{
+        padding-bottom: 30px;
+    }
+
 }
 @media screen and (max-width:700px) {
-
+    .courses {
+        padding: 20px 10px;
+    }
+    .interface{
+        padding: 20px 10px;
+    }
+    .features{
+        padding: 20px 10px;
+    }
+    .statistics{
+        padding: 20px 30px;
+    }
     .showen-courses {
         padding: 0px;
     }
-
     .best-course {
-        width: 100%;
+        width: 75%;
+        margin: auto;
+    }
+    .Testimonials .client-img img {
+        width: 60px;
+        height: 60px;
     }
 
-    .best-course:nth-of-type(3) {
+    .best-course:nth-of-type(3)
+    ,.best-course:nth-of-type(4) {
         display: none;
     }
 
-    .best-course:nth-of-type(4) {
-        display: none;
-    }
     .features{
         padding: 20px 10px;
     }
 }
 @media screen and (max-width:576px) {
+    p{
+        font-size: 14px;
+    }
+    h1{
+        font-size:28px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    a{
+    font-size: 14px
+    }
+    span{
+        font-size: 12px;
+    }
     .container {
-        width: calc(100% - 50px);
+        width: calc(100% - 10px);
     }
 
     .header .logo img {
         width: 25px;
+    }
+    .feature{
+        text-align: center;
+        width: 70%;
+    }
+    .feature svg{
+        margin: auto;
     }
 
     .footer-item {
@@ -653,19 +757,35 @@ footer i {
     .interface-content h1{
         width: 70%;
      }
-     .interface-photo img {
-        width: 250px;
-    }
-    .feature{
-        width:45%;
-    }
-    .feature:nth-last-child(2){
-        display: none;
-    }
     .features-count{
         width: 100%;
+    }
+    .feature{
+        margin: auto;
     }
     .statistics-text h2{
         width: 60%;
     }
+    .footer-item {
+        width: 100%;
+    }
+    .footer-end h2{
+        font-size: 25px;
+    }
+}
+@media screen  and (max-width:400px){
+    statistics-bar {
+        gap: 33px;
+    }
+    .interface-content h1 {
+         width: 80%; 
+         text-align: center;
+    }
+    .statistics-bar {
+        gap: 33px;
+    }
+    .course-name {
+        gap: 35px;
+    }
+    
 }
