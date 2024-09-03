@@ -334,6 +334,7 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 0;
+    height: 130vh;
 }
 .hidden-courses p:first-of-type {
     color: var(--mainColor);
@@ -368,8 +369,8 @@ body {
     gap: 40px;
 }
 .Testimonials {
-    padding: 40px 0px;
     background-color: #FFFFFF;
+    padding: 40px 20px;
 }
 .Testimonials h2 {
     text-align: center;
@@ -469,6 +470,22 @@ footer h2 {
 }
 /*end footer*/
 /*RWD */
+@media screen and (max-width:1900px) {
+    .hidden-courses{
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width:1700px) {
+    .hidden-courses{
+        height: 105vh;
+    }
+}
+@media screen and (max-width:1400px) {
+    .hidden-courses{
+        height: 85vh;
+    }
+}
 @media screen and (max-width:1200px) {
     .showen-courses {
         width: 100%;
@@ -488,6 +505,10 @@ footer h2 {
     .feature{
         padding: 20px 10px;
      }
+    .hidden-courses .column{
+        height: fit-content;
+    }
+
 }
 @media screen  and (max-width:1090px)  {
     .general-idea{
@@ -509,9 +530,7 @@ footer h2 {
         width: 100%;
         margin: auto;
     }
-    .showen-courses{
-        order: 2;
-    }
+
     .hidden-courses{
         padding-top: 50px;
     }
@@ -520,7 +539,6 @@ footer h2 {
     .header .nav {
         display: none;
     }
-
     .menu {
         display: block;
         order: 2;
