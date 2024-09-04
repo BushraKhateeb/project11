@@ -126,7 +126,8 @@ span{
  .interface .action{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
  }
  .interface .action a{
     background-color: var(--mainColor);
@@ -136,7 +137,7 @@ span{
     padding: 7px 30px;
     font-family: var(--subFont);
  }
- .interface .action div{
+ .interface .action .Play-Video{
     gap: 5px;
     align-items: center;
     display: flex;
@@ -483,9 +484,16 @@ footer i {
     .general-idea{
         width: 100%;
         padding-bottom: 20px;
+        text-align: center;
+    }
+    .feature{
+        text-align: center;
     }
     .features-count{
         width: 100%;
+    }
+    .feature svg{
+        margin: auto;
     }
     .courses h3{
         font-size: 20px;
@@ -504,7 +512,8 @@ footer i {
     }
 }
 @media screen and (max-width:1200px) {
-    .header .nav {
+    .header .nav
+    ,.header .auth {
         display: none;
     }
     .menu {
@@ -516,12 +525,13 @@ footer i {
      }
     .showen-courses {
         width: 100%;
+        order: 1;
     }
 
     .hidden-courses {
         width: 100%;
+    
     }
-
     .hidden-courses h2 {
         width: fit-content;
     }
@@ -560,9 +570,6 @@ footer i {
     .interface-photo img {
         width: 85%;
     }
-    .general-idea{
-        text-align: center;
-    }
     .feature:last-of-type{
         display: none;
     }
@@ -581,6 +588,13 @@ footer i {
     .interface-photo img {
         width:55%;
     }
+    .interface .action{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin: auto;
+        align-items: center;
+     }
     .Testimonial {
         width: 100%;
     }
@@ -611,9 +625,7 @@ footer i {
     .interface .text{
         text-align: center;
     }
-    .interface .action a
-    ,.interface .action div
-    ,.interface .text p{
+    .interface .text p{
         margin: auto;
     }
     .features{
@@ -743,11 +755,7 @@ footer i {
         width: 25px;
     }
     .feature{
-        text-align: center;
         width: 70%;
-    }
-    .feature svg{
-        margin: auto;
     }
 
     .footer-item {
